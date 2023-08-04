@@ -1,0 +1,31 @@
+[package]
+name = "dnd-character"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+license-file = "LICENSE"
+authors = ["DreamingCodes"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.72"
+cynic = { version = "3.2.2", features = ["http-reqwest"], optional = true }
+reqwest = { version = "0.11.18", optional = true }
+serde = { version = "1.0.178", optional = true }
+serde_json = { version = "1.0.104", optional = true }
+#ndm = "0.9.10" #dice library
+#rand = "0.8.5"
+
+[dev-dependencies]
+tokio = { version = "1.29.1", features = ["macros"] }
+futures = "0.3.28"
+
+[build-dependencies]
+cynic-codegen = { version = "3.2.2", optional = true }
+
+[features]
+default = ["api-rustls", "serde"]
+api = ["dep:cynic-codegen", "dep:cynic", "dep:reqwest"]
+api-rustls = ["api", "reqwest/rustls-tls"]
+serde = ["dep:serde", "dep:serde_json"]
