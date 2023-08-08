@@ -3,7 +3,6 @@ name = "dnd-character"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-license-file = "LICENSE"
 authors = ["DreamingCodes"]
 description = "A Dungeons and Dragons character generator"
 homepage = "https://dreaming.codes"
