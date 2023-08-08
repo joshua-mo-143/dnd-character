@@ -5,6 +5,9 @@ edition = "2021"
 license = "MIT"
 license-file = "LICENSE"
 authors = ["DreamingCodes"]
+description = "A Dungeons and Dragons character generator"
+homepage = "https://dreaming.codes"
+repository = "https://github.com/Dreaming-Codes/dnd-character"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
