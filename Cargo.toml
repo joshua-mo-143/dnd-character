@@ -28,6 +28,6 @@ cynic-codegen = { version = "3.2.2", optional = true }
 
 [features]
 default = ["api-rustls", "serde"]
-api = ["dep:cynic-codegen", "dep:cynic", "reqwest"]
+api = ["dep:cynic-codegen", "dep:cynic", "dep:reqwest"]
 api-rustls = ["api", "reqwest/rustls-tls"]
 serde = ["dep:serde", "dep:serde_json"]
